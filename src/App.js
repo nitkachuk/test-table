@@ -61,6 +61,10 @@ const App = () => {
         event.preventDefault();
         event.target.blur();
       }
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        document.activeElement.blur();
+      }
     };
     
     document.addEventListener('keydown', handleKeyDown);
