@@ -1,0 +1,50 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.cell {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.cell.selected {
+  pointer-events: none;
+  opacity: 1;
+}
+
+.cell:not(.selected):hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cell input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+
+/*
+.cell_focus {
+  background-color: red;
+}
+*/
+
+.cell_not_focus {
+  background-color: #e0e0e0;
+  color: silver;
+}
